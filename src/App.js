@@ -49,10 +49,9 @@ const getPrice = async () => {
   
 }
 const getPriceNetwork = async () => {
-  const rpc = "https://ropsten.infura.io/v3/12351ae7b81b4899bf671dfc4f732b16";
+  const rpc = "https://ropsten.infura.io/v3/INFURA-PROJECT-ID";
   const provider = new ethers.providers.JsonRpcProvider(rpc);
-  //const web3Provider = await Moralis.enableWeb3({urls:["https://ropsten.infura.io/v3/12351ae7b81b4899bf671dfc4f732b16"]});
-  console.log(provider);
+   console.log(provider);
   const contract =  new ethers.Contract(addr, abi, provider);
   console.log(contract);
   const value = await contract.salePrice(1);
